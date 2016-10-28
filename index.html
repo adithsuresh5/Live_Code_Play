@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CodePlayer</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-widht, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">CodePlayer</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="btn-group">
+		      	<button class="btn toggle btn-success">HTML</button>
+		      	<button class="btn toggle">CSS</button>
+		      	<button class="btn toggle">JS</button>
+		      	<button class="btn toggle btn-success">RESULT</button>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="wrapper">
+			
+			<div class="code-container HTML-container">
+				<label class="label label-primary">HTML</label>
+			 	<textarea id="htmlcontainer"></textarea>		
+			</div>
+
+			<div class="code-container CSS-container">
+				<label class="label label-warning">CSS</label>
+			 	<textarea id="csscontainer"></textarea>		
+			</div>
+
+			<div class="code-container JS-container">
+				<label class="label label-danger">JS</label>
+			 	<textarea id="jscontainer"></textarea>		
+			</div>
+
+			<div class="code-container RESULT-container">
+				<label class="label label-success">RESULT</label>
+			 	<iframe id="resultcontainer"></iframe>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			
+			var windowHeight = $(window).height();
+			var navBarHeight = $(".navbar").height();
+			var codeContainerHeight = windowHeight - navBarHeight;
+
+			$(".code-container").height(codeContainerHeight+"px");
+
+			$(".toggle").click
+			(
+				function()
+				{
+					$(this).toggleClass("btn-success");
+					var activeDiv = $(this).html();
+					$("."+activeDiv+"-container").toggle();
+					var visibleDivs = $(".code-container").filter(function(){
+							return($(this).css("display")!="none");
+						}).length;	
+					var Width = 100/visibleDivs;
+					$(".code-container").css("width", Width+"%");
+				}
+			);			
+		</script>
+	</body>
+</html>	
