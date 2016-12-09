@@ -70,3 +70,12 @@ iframe {
 .CSS-container, .JS-container {
 	display: none;
 }
+
+#btn-box {
+	display: block;
+	position: relative;
+	left: 55%;
+	border-radius: 3;
+	width: 8%;
+
+}

@@ -15,9 +15,10 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">CodePlayer</a>
+		    	<img src="images/google-code-logo.png" class="navbar-brand">
+		      	<!--<a class="navbar-brand" href="#">Codeplayer</a>-->
 		    </div>
-		    <ul class="nav navbar-nav">
+		    <ul class="nav navbar-nav navbar-center">
 		      <li class="btn-group">
 		      	<button class="btn toggle btn-success">HTML</button>
 		      	<button class="btn toggle">CSS</button>
@@ -25,27 +26,30 @@
 		      	<button class="btn toggle btn-success">RESULT</button>
 		      </li>
 		    </ul>
+		    <ul class="nav">
+		    		<button id="btn-box" class="btn btn-warning">RUN</button>
+		    </ul>
 		  </div>
 		</nav>
 		<div class="wrapper">
 			
 			<div class="code-container HTML-container">
 				<label class="label label-primary">HTML</label>
-			 	<textarea id="htmlcontainer"></textarea>		
+			 	<textarea id="htmlcontainer" placeholder="<-- HTML CODE HERE -->"></textarea>		
 			</div>
 
 			<div class="code-container CSS-container">
 				<label class="label label-warning">CSS</label>
-			 	<textarea id="csscontainer"></textarea>		
+			 	<textarea id="csscontainer" placeholder="//CSS CODE HERE"></textarea>		
 			</div>
 
 			<div class="code-container JS-container">
 				<label class="label label-danger">JS</label>
-			 	<textarea id="jscontainer"></textarea>		
+			 	<textarea id="jscontainer" placeholder="//JS CODE HERE"></textarea>		
 			</div>
 
 			<div class="code-container RESULT-container">
-				<label class="label label-success">RESULT</label>
+				<label class="label label-primary">RESULT</label>
 			 	<iframe id="resultcontainer"></iframe>
 			</div>
 
