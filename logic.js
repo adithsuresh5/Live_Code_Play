@@ -1,6 +1,6 @@
 var windowHeight = $(window).height();
-			var navBarHeight = $(".navbar").height();
-			var codeContainerHeight = windowHeight - navBarHeight;
+var navBarHeight = $(".navbar").height();
+var codeContainerHeight = windowHeight - navBarHeight;
 
 			$(".code-container").height(codeContainerHeight+"px");
 
@@ -18,3 +18,10 @@ var windowHeight = $(window).height();
 					$(".code-container").css("width", Width+"%");
 				}
 			);
+
+			$('#btn-result').click(
+					function() {
+						$("#resultcontainer").contents().find("html").html("<style>"+$('#csscontainer').val()+"</style>"+$("#htmlcontainer").val());
+						document.getElementById("resultcontainer").contentWindow.eval($('#jscontainer').val());
+					}
+				);
