@@ -8,52 +8,64 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 	</head>
+
 	<body>
+
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
+		  <div class="container-fluid">
 		    <div class="navbar-header">
-		    	<img src="images/google-code-logo.png" class="navbar-brand">
-		      	<!--<a class="navbar-brand" href="#">Codeplayer</a>-->
+		      <img class="navbar-brand img-responsive" src="images/google-code-logo.png" alt="CodePlayer">
 		    </div>
-		    <ul class="nav navbar-nav navbar-center">
-		      <li class="btn-group">
-		      	<button class="btn toggle btn-success">HTML</button>
-		      	<button class="btn toggle">CSS</button>
-		      	<button class="btn toggle">JS</button>
-		      	<button class="btn toggle btn-success">RESULT</button>
-		      </li>
-		    </ul>
-		    <ul class="nav">
-		    		<button id="btn-result" class="btn btn-warning">JS RUN</button>
-		    </ul>
+		    <div class="navbar-nav">
+		    	<li class="btn-group center">
+		      		<button class="btn navbar-btn toggle btn-success">HTML</button>
+		      		<button class="btn navbar-btn toggle">CSS</button>
+		      		<button class="btn navbar-btn toggle">JS</button>
+		      		<button class="btn navbar-btn toggle btn-success">RESULT</button>
+		    	</li>
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><button id="btn-result" class="btn navbar-btn btn-warning">JS RUN</button><li>
+		    	</ul>
+		    </div>
 		  </div>
 		</nav>
+
 		<div class="wrapper">
-			
-			<div class="code-container HTML-container">
-				<label class="label label-primary">HTML</label>
-			 	<textarea id="htmlcontainer" placeholder="<-- HTML CODE HERE -->"></textarea>		
-			</div>
+			  <div class="row">
 
-			<div class="code-container CSS-container">
-				<label class="label label-warning">CSS</label>
-			 	<textarea id="csscontainer" placeholder="//CSS CODE HERE"></textarea>		
-			</div>
+			    <div class="col-sm-*">
+					<div class="code-container HTML-container">
+						<label class="label label-primary">HTML</label>
+					 	<textarea id="htmlcontainer" placeholder="<-- HTML CODE HERE -->"></textarea>		
+					</div>
+			    </div>
 
-			<div class="code-container JS-container">
-				<label class="label label-danger">JS</label>
-			 	<textarea id="jscontainer" placeholder="//JS CODE HERE"></textarea>		
-			</div>
+			    <div class="col-sm-*">
+					<div class="code-container CSS-container">
+						<label class="label label-warning">CSS</label>
+					 	<textarea id="csscontainer" placeholder="//CSS CODE HERE"></textarea>		
+					</div>
+			    </div>
 
-			<div class="code-container RESULT-container">
-				<label class="label label-primary">RESULT</label>
-			 	<iframe id="resultcontainer"></iframe>
-			</div>
+			    <div class="col-sm-*">
+					<div class="code-container JS-container">
+						<label class="label label-danger">JS</label>
+					 	<textarea id="jscontainer" placeholder="//JS CODE HERE"></textarea>		
+					</div>
+			    </div>
 
+			    <div class="col-sm-*">
+					<div class="code-container RESULT-container">
+						<label class="label label-primary">RESULT</label>
+					 	<iframe id="resultcontainer"></iframe>
+					</div>
+			    </div>
+			  </div>
 		</div>
+
 
 		<script type="text/javascript" src="logic.js">
 		</script>
