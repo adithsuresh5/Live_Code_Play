@@ -1,2 +1,2 @@
-# RunTime-HTML-CSS-JS-CodePlayer
-It is a Runtime Codeplayer which displays the result while you CODE.
+# RealTime-HTML-CSS-JS-Editor
+It is a real time code editor which displays the result while you CODE
